@@ -13,31 +13,21 @@
     </head>
     <body>
         <%
-            Cookie[] cks = request.getCookies();
-            if (cks != null) {
-                for (int i = 0; i < cks.length; i++) {
-                    String name = cks[i].getName();
-                    String value = cks[i].getValue();
-                    if (name.equals("auth")) {
-                        break;
-                    }
-                    if (i == (cks.length - 1)) {
-                        response.sendRedirect("index.jsp");
-                        return;
-                    }
-                    i++;
+            if (session != null) {
+                if (session.getAttribute("user") != null) {
+                    String name = (String) session.getAttribute("user");
+                    //out.print("Hello, " + name + "  Welcome to ur Profile");
+                } else {
+                    response.sendRedirect("index.jsp");
                 }
-            } else {
-                response.sendRedirect("index.jsp");
-                return;
             }
         %>
-        
+
         <!-- CERRAR SESIÓN-->
         <form action="LogoutServlet" method="post">
             <input type="submit" value="Cerrar sesion">
         </form>
-        
+
         <h1>Añadir nuevo alumno</h1>        
         <form action="GuardarServlet" method="post">  
             <table>  
