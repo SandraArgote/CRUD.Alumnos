@@ -1,7 +1,7 @@
 <%-- 
     Document   : index
     Created on : 9/09/2020, 12:04:34 PM
-    Author     : Sandra Argote
+    Author     : Sandra Paulina Argote Romo
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
