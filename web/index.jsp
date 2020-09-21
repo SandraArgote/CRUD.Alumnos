@@ -12,19 +12,13 @@
         <title>CRUD Alumnos</title>  
     </head>  
     <body>  
-
-        <h1>Añadir alumno</h1>  
-        <form action="GuardarServlet" method="post">  
-            <table>  
-                <tr><td>Numero de control:</td><td><input type="text" name="NUMEROCONTROL"/></td></tr>  
-                <tr><td>Nombre:</td><td><input type="text" name="NOMBREALUMNO"/></td></tr>  
-                <tr><td>Curso:</td><td><input type="text" name="CURSO"/></td></tr>  
-                <tr><td>Semestre:</td><td><input type="text" name="SEMESTRE"/></td></tr>  
-                <tr><td colspan="2"><input type="submit" value="Guardar Alumno"/></td></tr>  
-            </table>  
-        </form>  
-        <br/>  
-        <a href="VistaServlet">Ver almunos</a>  
-
-    </body>  
+       
+        <form action="LoginServlet" method="post">
+            <h1> Acceso al sistema</h1>
+            Usuario: <input type="text" name="uname"><br><br>
+            Contraseña: <input type="password" name="pass"><br><br>
+            <input type="submit" value="Iniciar sesion">
+        </form>
+        
+     </body>  
 </html>  
